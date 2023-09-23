@@ -3,22 +3,37 @@ html {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #1e1e20;
 }
 
 table,
-td,
+td {
+  color: #9a9a9e;
+  border: 1px solid #ede;
+}
+
 th {
-  border: 1px solid #333;
+  color: #eee;
+  border: 1px solid #ede;
 }
 
 h2,
-h3 {
+h3,
+p,
+ul,
+li {
   margin: 0;
+  color: #9a9a9e;
 }
 
 .container {
   margin: 40px auto;
   width: 70%;
+  background-color: #252529;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.7);
   display: grid;
   grid-template-areas:
     "header header"
@@ -33,28 +48,81 @@ header {
   grid-area: header;
   display: grid;
   place-content: center;
-  background-image: url(./images/banner.jpg);
+  background-image: url(./images/banner.png);
   background-size: cover;
   background-position: center;
+  filter: blur();
   text-align: center;
+  border-radius: 10px 10px 0px 0px;
 }
 
 header .heading {
-  color: white;
+  color: #eee;
+  margin: 10px 0px;
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.75);
+}
+
+header .title {
+  font-size: 24px;
 }
 
 aside {
-  padding: 40px 0px;
+  padding: 40px 20px;
   grid-area: aside;
 }
 
+aside img {
+  width: 80%;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 3px #646cff solid;
+}
+
+aside h3 {
+  color: #eee;
+}
+
+aside li {
+  margin: 8px 0;
+}
+
 main {
-  padding: 40px 0px;
+  padding: 40px 20px;
   grid-area: main;
+}
+
+main h3 {
+  color: #eee;
+  margin: 0 0 20px;
+}
+
+main p {
+  margin: 0 0 20px;
+  text-align: justify;
+}
+
+main ul,
+main ol {
+  margin: 20px 0;
+}
+
+main li {
+  margin: 8px 0;
 }
 
 footer {
   grid-area: footer;
   padding: 40px 0px;
+  background-color: #646cff;
+  border-radius: 0px 0px 10px 10px;
   text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eee;
 }
